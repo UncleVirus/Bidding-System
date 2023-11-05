@@ -1,0 +1,138 @@
+<!-- 
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generate Report</title>
+    <link href="{% static 'gallery/img/favicon.png' %}" rel="icon">
+    <link href="{% static 'gallery/img/mach.jpg' %}" rel="apple-touch-icon">
+    
+    <style>
+            body {
+              height: 100%;
+              margin: 0;
+              padding: 0;
+          }
+          
+          body {
+              background-image: url("{% static 'gallery/img/wall.jpeg' %}");
+              background-size: cover;
+              background-position: center;
+              background-repeat: no-repeat;
+          } 
+     </style>
+
+</head>
+<body>
+    <h1>Generate Report</h1>
+
+    <form method="POST" action="{% url 'generate_report' %}">
+        {% csrf_token %}
+        
+        <label for="report_type">Select Report Type:</label>
+        <select name="report_type" id="report_type">
+            <option value="users">Users</option>
+            <option value="events">Events</option>
+            <option value="arts">Arts</option>
+            <option value="transactions">Transactions</option>
+        </select>
+
+        <br>
+
+            <label for="start_date">Start Date:</label>
+            <input type="date" name="start_date" id="start_date">
+
+            <label for="end_date">End Date:</label>
+            <input type="date" name="end_date" id="end_date">
+
+        <br>
+
+        <input type="submit" value="Generate Report">
+    </form>
+</body>
+</html> -->
+
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generate Report</title>
+    <link href="{% static 'gallery/img/favicon.png' %}" rel="icon">
+    <link href="{% static 'gallery/img/mach.jpg' %}" rel="apple-touch-icon">
+    
+    <style>
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+          
+        body {
+            background-image: url("{% static 'gallery/img/wall.jpeg' %}");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: inline-block;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 130%; /* Increase font size by 30% */
+        }
+
+        select, input[type="date"], input[type="submit"] {
+            margin-bottom: 10px;
+            font-size: 130%; /* Increase font size by 30% */
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <h1>Generate Report</h1>
+
+        <form method="POST" action="{% url 'generate_report' %}">
+            {% csrf_token %}
+            
+            <label for="report_type">Select Report Type:</label>
+            <select name="report_type" id="report_type">
+                <option value="users">Users</option>
+                <option value="events">Events</option>
+                <option value="arts">Arts</option>
+                <option value="transactions">Transactions</option>
+            </select>
+
+            <br>
+
+            <label for="start_date">Start Date:</label>
+            <input type="date" name="start_date" id="start_date">
+
+            <label for="end_date">End Date:</label>
+            <input type="date" name="end_date" id="end_date">
+
+            <br>
+
+            <input type="submit" value="Generate Report">
+        </form>
+    </div>
+</body>
+</html>

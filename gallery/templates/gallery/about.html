@@ -1,0 +1,193 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>About us</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <link href="{% static 'gallery/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'gallery/img/mach.jpg' %}" rel="apple-touch-icon">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+  <link href="{% static 'gallery/G17/animate/animate.min.css' %}" rel="stylesheet">
+  <link href="{% static 'gallery/G17/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'gallery/G17/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'gallery/G17/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'gallery/G17/boxicons/css/boxicons.min.css' %}"  rel="stylesheet">
+  <link href="{% static 'gallery/G17/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+  <link href="{% static 'gallery/css/style.css' %}" rel="stylesheet">
+  <!-- <link href="{% static 'gallery/css/about.css' %}" rel="stylesheet"> -->
+  <script src="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.css" />
+
+</head>
+
+<body>
+
+  <header id="header" class="fixed-top d-flex align-items-center ">
+    <div class="container d-flex justify-content-between align-items-center">
+
+      <div class="logo">
+        <h1 class="text-light"><a href="{% url 'home' %}"><span>ARTHUB</span></a></h1>
+      </div>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="" href="{% url 'home' %}">Home</a></li>
+          <li><a class="active" href="{% url 'about' %}">About</a></li>
+          <li><a href="{% url 'contact' %}">Contact Us</a></li>
+          <li><a href="{% url 'artwork' %}">Gallery</a></li>
+          <li><a href="{% url 'elearning' %}">ARTHUB Tutorials</a></li>
+          <li><a href="{% url 'blog' %}">Blog</a></li>  
+          <li><a href="{% url 'team' %}">Our Team</a></li>   
+          {% if user.is_staff %} 
+           <a href="{% url 'admin:index' %}"> Admin Panel</a>
+          {% endif %}
+          
+          {% if user.is_staff %} 
+           <a href="{% url 'generate_report' %}">Reports</a>
+          {% endif %} 
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+  <section class="about" data-aos="fade-up">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="container">
+          <div class="item">
+            <div class="picture">
+              <img src="{% static 'gallery/img/wall2.jpeg' %}" class="img-fluid" alt="">
+            </div>
+            <div class="text">
+              <h3>ARTHUB</h3>
+              <p>ARTHUB is an innovative Web-Based Art Gallery Management and Exhibition Platform tailored to the specific 
+                needs of the Kenyan art community. We uncover insights from art galleries, artists, and enthusiasts through a mixed-methods approach 
+                to inform ARTHUB's design. ARTHUB emerges as a user-centric solution,
+                uniting art stakeholders and revolutionizing art engagement, curation, and management. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="container">
+          <div class="item">
+            <div class="picture">
+              <img src="{% static 'gallery/img/wall.jpeg' %}" class="img-fluid" alt="">
+            </div>
+            <div class="text">
+              <h3>Our Vision</h3>
+              <p>To provide diverse and curated collection: The art gallery features a diverse range of artworks, representing different styles, periods, and mediums. The collection is carefully curated to ensure high-quality and meaningful pieces that captivate and inspire our clients.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="container">
+          <div class="item">
+            <div class="picture">
+              <img src="{% static 'gallery/img/patty.jpeg' %}" class="img-fluid" alt="">
+            </div>
+            <div class="text">
+              <h3>Our Mission</h3>
+              <p>ARTHUB serves the nation by welcoming all people to explore and experience art, creativity on the click of a button at the comfort of your office,couch or bed.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="container">
+          <div class="item">
+            <div class="picture">
+              <img src="{% static 'gallery/img/nuns.jpeg' %}" class="img-fluid" alt="">
+            </div>
+            <div class="text">
+              <h3>Our impact on the society</h3>
+                <p>Exhibition and Promotion: ARTHUB serves as virtual exhibition spaces, allowing artists to display their artwork to a wider audience beyond physical gallery walls.
+                 It promotes artists and their works, facilitating exposure and recognition. Sales and Art Market: it enables art sales and transactions, connecting collectors and buyers with artists.
+                 It greatly contributes to the art market's growth and accessibility by facilitating the purchase of artworks worldwide.
+                 Artistic Collaboration: it facilitates collaborations between artists, curators, and art professionals, creating opportunities for artists to connect, share ideas, and collaborate on projects, fostering a vibrant artistic community.
+               </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  </main>
+  <footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'home' %}">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'about' %}">About us</a></li>
+
+            </ul>
+        </div>
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contact Us</h4>
+            <p>
+              Prestige Plaza<br>
+              Along Ngong Road<br>
+              Next to the Double Tree Hotel by Hilton,<br> 
+              Nairobi County.<br>
+              KENYA.<br>
+              <strong>Phone:</strong> +254 718087082<br>
+              <strong>Email:</strong> grivinjuma@gmail.com<br> 
+              muyakajestmore@gmail.com<br>
+            </p>
+
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-info">
+            <h3>About ARTHUB</h3>
+            <p> ARTHUB is an artist-started gallery that aims at providing art lovers with first hand artwork experience like no other.</p>
+            <p>The driving force behind the idea was to provide first class art exploration experience to art lovers at the comfort of their homes,offices and absolutely anywhere they felt comfortable to view the artworks.</p>
+            <!-- <div class="social-links mt-3">
+              <a href="https://twitter.com/i/flow/login?redirect_after_login=%2Flogin%3Flang%3Den" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="https://www.facebook.com/login/" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="https://www.instagram.com/" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="https://ke.linkedin.com/in/wahome-kariuki-999099123" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div> -->
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>G17</span></strong>. All Rights Reserved
+      </div>
+    </clas>
+    </div>
+  </footer>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <script src="{% static 'gallery/G17/purecounter/purecounter_vanilla.js' %}"></script>
+  <script src="{% static 'gallery/G17/aos/aos.js' %}"></script>
+  <script src="{% static 'gallery/G17/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'gallery/G17/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'gallery/G17/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'gallery/G17/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'gallery/G17/waypoints/noframework.waypoints.js' %}"></script>
+  <script src="{% static 'gallery/scripts/main.js' %}"></script>
+
+</body>
+
+</html>

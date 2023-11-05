@@ -1,0 +1,83 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>payment form</title>
+  <link href="{% static 'gallery/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'gallery/img/mach.jpg' %}" rel="apple-touch-icon">
+  <style>
+              body {
+                height: 100%;
+                margin: 0;
+                padding: 0;
+              }
+
+              body {
+                background-image: url("{% static 'gallery/img/wall.jpeg' %}");
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+              }
+
+              body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+              }
+
+              main {
+                max-width: 600px; /* Increase the max-width value to make the form wider */
+                padding: 40px; /* Increase the padding value to give more space around the form */
+                background: #f2f2f2;
+                border-radius: 8px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+              }
+
+              form {
+                display: flex;
+                flex-direction: column;
+                gap: 20px; /* Increase the gap value to add more space between form elements */
+              }
+
+              label {
+                font-weight: bold;
+                font-size: 18px; /* Increase the font-size value to make the labels larger */
+              }
+
+              input[type="submit"] {
+                background: #428bca;
+                color: #fff;
+                padding: 15px 30px; /* Increase the padding value to make the button larger */
+                font-size: 20px; /* Increase the font-size value to make the button text larger */
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+              }
+
+  </style>
+</head>
+<body>
+  <main>
+    <form method="post" action="{% url 'index' %}">
+      {% csrf_token %}
+      <label for="amount">Amount(Ksh):</label>
+      <input type="number" value="{{ art.cost }}" name="amount" readonly>
+  
+      <label for="artwork">Name:</label>
+      <input type="text" value="{{ art.title }}" name="artwork" readonly>
+  
+      <label for="quantity">Quantity:</label>
+      <input type="number" name="quantity" min="1" value="1" required>
+  
+      <label for="phone">Phone Number:</label>
+      <input type="tel" value="" name="phone" required>
+  
+      <input type="submit" value="Pay" name="">
+    </form>
+  </main>
+</body>
+</html>

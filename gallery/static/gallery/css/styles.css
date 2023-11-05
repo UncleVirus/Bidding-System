@@ -1,0 +1,58 @@
+* styles.css */
+
+/* Body styles */
+body {
+    background-image:url('{% static "gallery/img/team/wall.jpeg" %}'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Container styles */
+.signin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Form styles */
+.content {
+    max-width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Additional form styling */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.inputBox input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+}
+
+.inputBox input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.links {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.links a {
+    color: #555;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+

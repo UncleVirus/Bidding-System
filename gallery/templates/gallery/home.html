@@ -1,0 +1,107 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>ARTHUB</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  
+  
+  <link href="{% static 'gallery/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'gallery/img/mach.jpg' %}" rel="apple-touch-icon">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+  <link href="{% static 'gallery/G17/animate/animate.min.css' %}" rel="stylesheet">
+  <link href="{% static 'gallery/G17/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'gallery/G17/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'gallery/G17/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'gallery/G17/boxicons/css/boxicons.min.css' %}"  rel="stylesheet">
+  <link href="{% static 'gallery/G17/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+  <link href="{% static 'gallery/css/style.css' %}" rel="stylesheet">
+  <script src="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.js"></script>
+<link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.css" />
+
+</head>
+
+<body>
+
+  <header id="header" class="fixed-top d-flex align-items-center header-transparent">
+    <div class="container d-flex justify-content-between align-items-center">
+
+      <div class="logo">
+        <h1 class="text-light"><a href="{% url 'home' %}"><span>ARTHUB</span></a></h1>
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="active " href="{% url 'home' %}">Home</a></li>
+          <li><a href="{% url 'login' %}">Login</a></li>
+
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+
+    </div>
+  </header>
+  <section id="hero" class="d-flex justify-cntent-center align-items-center">
+    <div id="heroCarousel" class="container carousel carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+
+  <!--slide 1-->
+      <div class="carousel-item active">
+        <div class="carousel-container">
+          <h2 class="animate__animated animate__fadeInDown">WELCOME TO <span>ARTHUB</span></h2>
+          <p class="animate__animated animate__fadeInUp">We found we could say things with color and shapes that we couldn't say any other way—things we had no words for.</p>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+        <div class="carousel-container">
+          <h2 class="animate__animated animate__fadeInDown">ARTHUB</h2>
+          <p class="animate__animated animate__fadeInUp">The artists work around the clock to ensure they deliver only the best to our esteemed clients whole year round. The team work collaboratively to ensure high standards and quality are met to ensure the continuous satisfaction of our evergrowing clieantal base</p>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="carousel-item">
+        <div class="carousel-container">
+          <h2 class="animate__animated animate__fadeInDown">Mission Of ARTHUB</h2>
+          <p class="animate__animated animate__fadeInUp">To ensure the continued offering and delivery of quality and affordable artworks to our esteemed clients and to ensure the continuous bridging of the artistic gap in the country between the much abled or rather elite members of the society and the lower bracket of the society by providing unlimited access to artworks and art learning materials at a rather affordable prices.</p>
+          <a href="" class="btn-get-started animate__animated animate__fadeInUp">Read More</a>
+        </div>
+      </div>
+    </div>
+
+  <main id="main">
+
+
+  </main>
+  <footer>
+ 
+
+</div>
+</div>
+</div>
+</footer>
+
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+<script src="{% static 'gallery/G17/purecounter/purecounter_vanilla.js' %}"></script>
+<script src="{% static 'gallery/G17/aos/aos.js' %}"></script>
+<script src="{% static 'gallery/G17/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'gallery/G17/glightbox/js/glightbox.min.js' %}"></script>
+<script src="{% static 'gallery/G17/isotope-layout/isotope.pkgd.min.js' %}"></script>
+<script src="{% static 'gallery/G17/swiper/swiper-bundle.min.js' %}"></script>
+<script src="{% static 'gallery/G17/waypoints/noframework.waypoints.js' %}"></script>
+<script src="{% static 'gallery/scripts/main.js' %}"></script>
+
+
+
+
+</body>
+
+</html>

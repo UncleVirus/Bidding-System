@@ -1,0 +1,118 @@
+/* CSS code for alternating picture and text arrangement */
+.about .container .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .about .container .col-lg-6 {
+    width: 75%; 
+    margin-bottom: 20px;
+    display: flex;
+  }
+  
+  .about .container .col-lg-6:nth-child(odd) {
+    flex-direction: row-reverse; 
+  }
+  
+  .about .container .col-lg-6 .img-fluid {
+    width: 120%;
+  }
+  
+  .about .container .col-lg-6 .text {
+    width: 100%;
+  }
+  
+
+  @media (max-width: 768px) {
+    .about .container .col-lg-6:nth-child(odd) {
+      flex-direction: row; 
+    }
+  }
+
+
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .item {
+    flex-basis: 70%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .picture img {
+    max-width: 100%;
+  }
+  
+  .text {
+    padding: 0 20px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .item {
+      flex-basis: 100%;
+    }
+  }
+
+  /* file 2 */
+
+  /* .container .item {
+    background-color: #f7f7f7;
+    padding: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .container .item .picture img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+  
+  .container .item .text h6 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .container .item .text p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #666;
+  }  */
+
+  /* file 3 */
+  /* .container .item {
+    background-color: #f7f7f7;
+    padding: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .container .item:hover {
+    transform: scale(1.1);
+  }
+  
+  .container .item .picture img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+  
+  .container .item .text h6 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .container .item .text p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #666;
+  } 
+
+  .

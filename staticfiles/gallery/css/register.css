@@ -1,0 +1,39 @@
+/* Style the form container */
+.form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Style the labels */
+  label {
+    color: lime;
+    font-weight: bold;
+  }
+  
+  /* Style the input fields */
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+  }
+  
+  /* Style the sign-up button */
+  button[type="submit"] {
+    background-color: lime;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: lightgreen;
+  }
+  
+  /* Add spacing between form groups */
+  .form-group {
+    margin-bottom: 20px;
+  }
